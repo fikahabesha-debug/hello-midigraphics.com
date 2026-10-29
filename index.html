@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Midi Graphics — thoughtful logos, brand identities, social media designs and visual content.">
+  <title>Midi Graphics | Design that speaks</title>
+  <style>
+    :root{--ink:#10231f;--green:#064e3b;--green2:#0b6b50;--lime:#c9f36b;--cream:#f6f5ef;--paper:#fffef9;--muted:#65736d;--line:#dce3dc}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(246,245,239,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(16,35,31,.08)}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:-.04em;font-size:1.15rem}.brand img{width:55px;height:55px;object-fit:contain}.brand span{display:block;font-size:.64rem;letter-spacing:.19em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:-4px}
+    nav{display:flex;align-items:center;gap:30px;font-size:.92rem;font-weight:650}nav a:hover{color:var(--green2)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:13px 19px;border-radius:999px;background:var(--green);color:white;font-weight:750;border:1px solid var(--green);transition:.2s}.nav-cta:hover,.btn:hover{background:var(--green2);transform:translateY(-2px)}.menu{display:none;background:none;border:0;font-size:1.7rem}
+    .hero{padding:76px 0 78px;overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:64px}.eyebrow{display:inline-flex;align-items:center;gap:9px;text-transform:uppercase;letter-spacing:.16em;font-size:.75rem;font-weight:850;color:var(--green2)}.eyebrow:before{content:"";width:26px;height:2px;background:var(--green2)}
+    h1{font-size:clamp(3.3rem,6.5vw,6.4rem);line-height:.98;letter-spacing:-.075em;margin:20px 0 24px;font-weight:850}h1 em{font-style:normal;color:var(--green2)}.hero-copy{font-size:1.12rem;color:#52615b;max-width:530px;margin:0 0 30px}.hero-actions{display:flex;gap:13px;flex-wrap:wrap}.btn.secondary{background:transparent;color:var(--ink);border-color:#bdc9c0}.btn.secondary:hover{background:white}.mini-proof{display:flex;align-items:center;gap:13px;margin-top:30px;color:var(--muted);font-size:.88rem}.proof-dot{width:9px;height:9px;background:#8cc63e;border-radius:50%;box-shadow:0 0 0 5px #e4efcf}
+    .hero-visual{position:relative;min-height:500px;background:var(--green);border-radius:32px;display:flex;align-items:flex-end;justify-content:center;overflow:hidden;isolation:isolate}.hero-visual:before{content:"";position:absolute;width:370px;height:370px;border-radius:50%;background:var(--lime);top:44px;right:-42px;z-index:-1}.hero-visual:after{content:"M";position:absolute;left:24px;top:2px;font-size:12rem;line-height:1;font-weight:950;color:rgba(255,255,255,.09);letter-spacing:-.12em;z-index:-1}.portrait{height:470px;width:100%;object-fit:contain;object-position:center bottom;align-self:flex-end;filter:drop-shadow(0 12px 25px rgba(0,0,0,.15))}.floating-note{position:absolute;left:22px;bottom:24px;background:var(--paper);border-radius:17px;padding:14px 17px;box-shadow:0 14px 40px #001a1226;font-size:.85rem}.floating-note strong{display:block;font-size:1rem}.floating-note span{color:var(--muted)}
+    .ticker{background:var(--lime);padding:17px 0;overflow:hidden;white-space:nowrap;font-size:.8rem;letter-spacing:.17em;text-transform:uppercase;font-weight:900}.ticker-inner{display:flex;justify-content:space-around;gap:40px}.ticker b{font-size:1.1rem}
+    section{padding:92px 0}.section-top{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:34px}.section-top h2,.about-copy h2,.contact-copy h2{font-size:clamp(2.35rem,4.3vw,4rem);line-height:1.05;letter-spacing:-.065em;margin:12px 0 0}.section-top p{max-width:390px;color:var(--muted);margin:0}
+    .services{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{background:var(--paper);padding:25px;border:1px solid var(--line);border-radius:22px;min-height:230px;transition:.25s}.service:hover{transform:translateY(-5px);border-color:#9bb9a9;box-shadow:0 18px 40px #1c3c2b0b}.service-icon{width:46px;height:46px;border-radius:14px;background:#e8f0e5;color:var(--green);display:grid;place-items:center;font-size:1.4rem}.service h3{margin:25px 0 8px;font-size:1.12rem}.service p{color:var(--muted);font-size:.93rem;margin:0}
+    .portfolio{background:var(--ink);color:white}.portfolio .section-top p{color:#b6c3bc}.portfolio .eyebrow{color:var(--lime)}.portfolio .eyebrow:before{background:var(--lime)}.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.work{border-radius:24px;overflow:hidden;background:#1a342d;border:1px solid #345047}.work-art{height:285px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}.work-art.logo-art{background:#d8edc5;color:#123b2c}.work-art.social-art{background:#f1c8ad;color:#482e26}.work-art.banner-art{background:#c8d7f0;color:#182e54}.work-art.thumb-art{background:#f4e98b;color:#282b14}.art-label{position:absolute;top:17px;left:18px;font-size:.68rem;text-transform:uppercase;letter-spacing:.14em;font-weight:900;opacity:.75}.logo-lockup{text-align:center;font-weight:950;letter-spacing:-.07em;font-size:3.2rem;line-height:.95}.logo-lockup small{display:block;font-size:.68rem;letter-spacing:.25em;margin-top:12px}.social-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:center;width:76%}.social-card{padding:18px;border-radius:16px;background:#fff6e9;box-shadow:8px 9px 0 #b77d67}.social-card h4{font-size:1.8rem;line-height:1;margin:12px 0}.social-card p{font-size:.7rem}.social-bubble{background:#d56b4b;color:white;padding:23px;border-radius:50%;text-align:center;font-weight:900;aspect-ratio:1;display:grid;place-items:center}.banner-layout{width:85%;padding:26px;background:#f4f7ff;border-radius:14px;box-shadow:15px 15px 0 #92a8cf}.banner-layout h4{font-size:2rem;line-height:1.05;margin:8px 0}.banner-layout span{font-size:.72rem;letter-spacing:.15em}.banner-lines{height:6px;width:55%;background:#ed8a61;margin-top:16px}.thumb-layout{width:82%;transform:rotate(-3deg);background:#252c20;color:#fff7c1;padding:26px;border:5px solid #fff7c1;box-shadow:12px 12px 0 #b6a93f}.thumb-layout strong{font-size:2.6rem;line-height:.95;display:block;letter-spacing:-.05em}.thumb-layout small{display:block;margin-top:14px;color:#c9f36b;font-weight:800}.work-info{padding:20px 22px 23px;display:flex;justify-content:space-between;gap:16px;align-items:center}.work-info h3{margin:0;font-size:1.1rem}.work-info p{margin:3px 0 0;color:#b6c3bc;font-size:.85rem}.arrow{width:38px;height:38px;display:grid;place-items:center;border-radius:50%;border:1px solid #557066;font-size:1.2rem}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:76px;align-items:center}.about-mark{background:#e4ebdc;border-radius:28px;min-height:340px;display:grid;place-items:center;padding:45px}.about-mark img{width:100%;max-width:300px;object-fit:contain;mix-blend-mode:multiply}.about-copy p{color:var(--muted);font-size:1.04rem;max-width:620px}.values{display:flex;gap:22px;flex-wrap:wrap;margin-top:25px}.value{display:flex;gap:8px;align-items:center;font-weight:750;font-size:.9rem}.value span{color:var(--green2);font-weight:900}
+    .contact{background:#e7eee3}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px}.contact-copy p{color:var(--muted);max-width:400px}.contact-links{display:grid;gap:12px;margin-top:26px}.contact-links a{font-weight:750}.contact-links span{color:var(--muted);font-weight:500;margin-left:8px}.contact-form{background:var(--paper);padding:28px;border:1px solid #d7e1d5;border-radius:24px}.field{display:grid;gap:7px;margin-bottom:16px}.field label{font-size:.82rem;font-weight:800}.field input,.field textarea{width:100%;border:1px solid #d5ded6;background:#fff;border-radius:12px;padding:13px 14px;outline:none}.field input:focus,.field textarea:focus{border-color:var(--green2);box-shadow:0 0 0 3px #0b6b5015}.field textarea{min-height:115px;resize:vertical}.contact-form .btn{cursor:pointer;width:100%}.form-note{font-size:.78rem;color:var(--muted);margin:12px 0 0}
+    footer{background:var(--ink);color:#e9f0eb;padding:28px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{display:flex;align-items:center;gap:10px;font-weight:900}.footer-brand img{width:44px;height:44px;object-fit:contain;background:white;border-radius:10px}.footer-brand small{display:block;color:#aebdb4;font-weight:500}.footer-links{display:flex;gap:20px;color:#c3d0c7;font-size:.88rem}.copyright{font-size:.8rem;color:#9eafa5}
+    @media(max-width:900px){.hero-grid{gap:30px;grid-template-columns:1fr  .85fr}.hero-visual{min-height:420px}.portrait{height:400px}.services{grid-template-columns:repeat(2,1fr)}.about-grid,.contact-grid{gap:35px}.section-top{align-items:start;flex-direction:column}}
+    @media(max-width:650px){.wrap{width:min(100% - 30px,1160px)}.nav{height:68px}.brand img{width:46px;height:46px}nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--cream);padding:20px 22px 24px;flex-direction:column;align-items:stretch;gap:18px;border-bottom:1px solid var(--line)}nav.open{display:flex}.nav-cta{display:none}.menu{display:block}.hero{padding:45px 0 48px}.hero-grid{grid-template-columns:1fr;gap:35px}h1{font-size:clamp(3.2rem,16vw,5.4rem)}.hero-copy{font-size:1rem}.hero-visual{min-height:390px}.portrait{height:370px}.hero-visual:before{width:290px;height:290px;right:-28px;top:38px}.ticker-inner{justify-content:flex-start;gap:28px;padding-left:18px}.ticker-inner span{flex-shrink:0}section{padding:66px 0}.services{grid-template-columns:1fr 1fr;gap:10px}.service{padding:18px;min-height:215px}.service h3{margin-top:18px;font-size:1rem}.service p{font-size:.86rem}.work-grid{grid-template-columns:1fr}.work-art{height:250px}.about-grid,.contact-grid{grid-template-columns:1fr}.about-mark{min-height:250px}.about-mark img{max-width:230px}.contact-form{padding:20px}.footer-row{align-items:flex-start;flex-direction:column}.footer-links{flex-wrap:wrap}.copyright{margin-top:0}}
+    @media(max-width:390px){.services{grid-template-columns:1fr}.hero-actions .btn{width:100%}.work-art{height:220px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Midi Graphics home">
+      <img src="assets/midi-graphics-logo.png" alt="Midi Graphics logo">
+      <div>Midi Graphics<span>Creative studio</span></div>
+    </a>
+    <nav id="site-nav" aria-label="Main navigation">
+      <a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#about">About</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's work together ↗</a>
+    <button class="menu" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Independent graphic designer</div>
+        <h1>Good design.<br><em>Real impact.</em></h1>
+        <p class="hero-copy">I’m Midi Graphics — creating memorable visual identities and digital designs that help brands show up with confidence.</p>
+        <div class="hero-actions"><a class="btn" href="#portfolio">Explore my work <span>↗</span></a><a class="btn secondary" href="#contact">Start a project</a></div>
+        <div class="mini-proof"><span class="proof-dot"></span> Logo design · Branding · Digital content</div>
+      </div>
+      <div class="hero-visual">
+        <img class="portrait" src="assets/profile-photo.png" alt="Portrait of the Midi Graphics designer">
+        <div class="floating-note"><strong>Ideas into identity.</strong><span>Design with purpose.</span></div>
+      </div>
+    </div>
+  </section>
+  <div class="ticker"><div class="wrap ticker-inner"><span>Brand identity <b>✳</b></span><span>Logo design <b>✳</b></span><span>Social media design <b>✳</b></span><span>Visual storytelling <b>✳</b></span></div></div>
+
+  <section id="services">
+    <div class="wrap">
+      <div class="section-top"><div><div class="eyebrow">What I do</div><h2>Design made for<br>your next chapter.</h2></div><p>From a strong first impression to a consistent brand presence, I help turn your ideas into visuals people remember.</p></div>
+      <div class="services">
+        <article class="service"><div class="service-icon">✳</div><h3>Logo Design</h3><p>Distinctive, versatile logos built around your brand’s personality.</p></article>
+        <article class="service"><div class="service-icon">◈</div><h3>Brand Identity</h3><p>Color, typography and visual systems that make your brand feel cohesive.</p></article>
+        <article class="service"><div class="service-icon">▧</div><h3>Social Media Design</h3><p>Scroll-stopping posts and campaign graphics made for your audience.</p></article>
+        <article class="service"><div class="service-icon">▶</div><h3>YouTube Thumbnails</h3><p>Clear, engaging thumbnail concepts that bring your video idea forward.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="wrap">
+      <div class="section-top"><div><div class="eyebrow">Selected directions</div><h2>Visual ideas, made visible.</h2></div><p>Here are sample concept panels showing the kinds of design work Midi Graphics can create. Replace these with your finished projects as your portfolio grows.</p></div>
+      <div class="work-grid">
+        <article class="work"><div class="work-art logo-art"><span class="art-label">01 / Identity concept</span><div class="logo-lockup">NOVA<small>STUDIO GOODS</small></div></div><div class="work-info"><div><h3>Logo & Identity</h3><p>Minimal marks · Strong typography</p></div><span class="arrow">↗</span></div></article>
+        <article class="work"><div class="work-art social-art"><span class="art-label">02 / Social campaign concept</span><div class="social-layout"><div class="social-card"><small>THE DAILY EDIT</small><h4>Make<br>room for<br>good things.</h4><p>FIND YOUR EVERYDAY FAVORITE</p></div><div class="social-bubble">NEW<br>SEASON</div></div></div><div class="work-info"><div><h3>Social Media Graphics</h3><p>Campaigns · Content systems</p></div><span class="arrow">↗</span></div></article>
+        <article class="work"><div class="work-art banner-art"><span class="art-label">03 / Banner concept</span><div class="banner-layout"><span>BUILD YOUR NEXT IDEA</span><h4>Think bigger.<br>Make it happen.</h4><div class="banner-lines"></div></div></div><div class="work-info"><div><h3>Banners & Promotions</h3><p>Digital banners · Advertising</p></div><span class="arrow">↗</span></div></article>
+        <article class="work"><div class="work-art thumb-art"><span class="art-label">04 / Video thumbnail concept</span><div class="thumb-layout"><strong>DESIGN<br>LIKE A PRO</strong><small>5 TIPS THAT WORK ↗</small></div></div><div class="work-info"><div><h3>YouTube Thumbnails</h3><p>Bold layouts · Clear visual hooks</p></div><span class="arrow">↗</span></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="about-mark"><img src="assets/midi-graphics-logo.png" alt="Midi Graphics logo"></div>
+      <div class="about-copy"><div class="eyebrow">A little about me</div><h2>Every brand has a story. Let’s make yours stand out.</h2><p>I’m the designer behind Midi Graphics. I enjoy shaping ideas into clean, memorable visuals — from logo concepts and brand identities to digital content that communicates clearly.</p><p>My approach is simple: understand the goal, explore ideas, and create design that feels intentional and useful for your audience.</p><div class="values"><div class="value"><span>✓</span> Thoughtful concepts</div><div class="value"><span>✓</span> Clear communication</div><div class="value"><span>✓</span> Detail-focused work</div></div></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-copy"><div class="eyebrow">Have a project?</div><h2>Let’s make something meaningful.</h2><p>Have a new brand, a logo idea, or content that needs a visual refresh? Tell me a little about it and let’s talk.</p><div class="contact-links"><a href="mailto:hello@midigraphics.com">✉ <span>Email: hello@midigraphics.com</span></a><a href="#portfolio">↗ <span>Explore the sample portfolio above</span></a></div></div>
+      <form class="contact-form" id="contact-form">
+        <div class="field"><label for="name">Your name</label><input id="name" name="name" placeholder="Name" required></div>
+        <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" placeholder="you@example.com" required></div>
+        <div class="field"><label for="project">What do you need?</label><textarea id="project" name="project" placeholder="Tell me about your project..." required></textarea></div>
+        <button class="btn" type="submit">Prepare message ↗</button>
+        <p class="form-note">This opens your email app with your message ready to send. No message is stored on this website.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-row"><a class="footer-brand" href="#home"><img src="assets/midi-graphics-logo.png" alt=""><span>Midi Graphics<small>Design that speaks.</small></span></a><div class="footer-links"><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a></div><div class="copyright">© <span id="year"></span> Midi Graphics</div></div></footer>
+<script>
+  const menu = document.getElementById('menu-toggle');
+  const nav = document.getElementById('site-nav');
+  menu.addEventListener('click', () => { const open = nav.classList.toggle('open'); menu.setAttribute('aria-expanded', String(open)); menu.textContent = open ? '×' : '☰'; });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { nav.classList.remove('open'); menu.setAttribute('aria-expanded','false'); menu.textContent='☰'; }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+  document.getElementById('contact-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const project = document.getElementById('project').value.trim();
+    const subject = encodeURIComponent('Project enquiry — Midi Graphics');
+    const body = encodeURIComponent(`Hello Midi Graphics,\n\nMy name is ${name} (${email}).\n\nProject details:\n${project}\n\nThank you.`);
+    window.location.href = `mailto:hello@midigraphics.com?subject=${subject}&body=${body}`;
+  });
+</script>
+</body>
+</html>
